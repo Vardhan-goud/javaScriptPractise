@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+
+        <p id="p1" >VArdhan from India</p>
+
+        <button onclick="changecolor()">Change color</button>
+        <br>
+        <button onclick="changeborder()">Changeborder</button>
+        <br>
+        <button onclick="changebackground()">Change background</button>
+
+        <script>
+
+            document.getElementById("p1").style.color="green";
+            function changecolor()
+            {
+                document.getElementById("p1").style.color="red";
+            }
+            function changeborder()
+            {
+                document.getElementById("p1").style.border="2px solid black";
+            }
+            function changebackground()
+            {
+                document.getElementById("p1").style.backgroundColor="yellow";
+            }
+        </script>
+
+
+
+    </body>
+</html>

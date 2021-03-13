@@ -1,0 +1,52 @@
+<html>
+    <head></head>
+    <style>
+        #parent
+        {
+            height:400px;
+            width:400px;
+            position:relative;
+            background-color:blue;
+        }
+        #child
+        {
+            height:40px;
+            width:40px;
+            position:absolute;
+            background-color:white;
+            border-radius: 50%;
+        }
+        
+    </style>
+    <body>
+        <div id="parent">
+            <div id=child onclick="moveball()"></div>
+        </div>
+
+
+        <script>
+            function moveball()
+            {
+                let child=document.getElementById("child");
+                let counter=0;
+                var id=setInterval(Anime,5);
+                function Anime()
+                {
+                    if(counter==350)
+                    {
+                        clearInterval(id);
+                    }
+                    else
+                    {
+                        counter++;
+                        document.getElementById("child").style.top=counter+"px";
+                        document.getElementById("child").style.left=counter+"px";
+
+                    }
+                }
+            }
+        </script>
+
+        
+    </body>
+</html>

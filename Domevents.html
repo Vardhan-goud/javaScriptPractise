@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body onload="message()">
+        enter your name :
+        <input type="text" id="fn" onchange="myfun()" onfocus="changebg(this)">
+
+        <div id="d1" onmouseover="myfun1()" onmouseup="myfun3(this)" onmouseout="myfun2()">mouseout</div>
+
+
+        <div id="d2" onmouseup="myfun3(this)"  onmousedown="myfun4(this)">mouse</div>
+
+        <script>
+            function myfun()
+            {
+                let k=document.getElementById("fn");
+                k.value=k.value.toUpperCase();
+            }
+
+            function myfun1()
+            {
+                document.getElementById("d1").innerHTML="mouseover";
+            }
+            function myfun2()
+            {
+                document.getElementById("d1").innerHTML="mouseout";
+            }
+            function myfun3(obj)
+            {
+                obj.innerHTML="mouseup";
+            }
+            function myfun4(obj)
+            {
+                obj.innerHTML="mousedown";
+            }
+            function message()
+            {
+                alert("hii people")
+            }
+            function changebg(obj)
+            {
+                obj.style.backgroundColor="yellow"
+            }
+
+        </script>
+    </body>
+</html>

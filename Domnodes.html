@@ -1,0 +1,86 @@
+<html>
+    <head></head>
+    <body id="b">
+        <p id="p1">paragraph1</p>
+        <p>paragraph2</p>
+
+        <div id="div1">
+            <p id="pc1">vardhan</p>
+            <p id='pc2'>Karthik</p>
+        </div>
+
+        <h2 >first</h2>
+        <h2>second</h2>
+        <h2>third</h2>
+
+    </body>
+
+
+    <script>
+      
+      document.getElementById("p1").firstChild.nodeValue="first paragraph is changed";
+      var p=document.getElementById("b").childNodes;
+      console.log(p[1].firstChild.nodeValue);
+
+      console.log( document.getElementById("p1").nodeName)
+
+      console.log( document.getElementById("p1").nodeType)
+
+
+      //alert(document.body.innerHTML)
+
+      //alert(document.documentElement.innerHTML)
+
+
+      //creating element
+
+      var p=document.createElement("p")
+      var c=document.createTextNode("hello i am added now");
+      var idp=document.createAttribute(id="pc3");
+      p.appendChild(c)
+      document.getElementById("div1").appendChild(p)
+
+
+      var p2=document.createElement("p")
+      var c2=document.createTextNode("hello i am added now");
+      p2.appendChild(c2)
+      document.getElementById("div1").insertBefore(p2,pc1)
+
+
+
+      //reoving html elements
+
+      document.getElementById("pc1").remove();
+
+
+
+      //replace element
+
+      let v=document.createElement("h1");
+      let vc=document.createTextNode("hii replace me")
+
+      v.appendChild(vc)
+
+      let k=document.getElementById("pc2");
+
+      let pd=document.getElementById("div1");
+
+      pd.replaceChild(v,pc2);
+      
+
+     
+     //collections
+
+     let collection=document.getElementsByTagName("h2")
+     console.log(collection.length)
+
+     for(var i=0;i<collection.length;i++)
+     {
+         collection[i].style.color="red";
+     }
+
+
+
+
+    </script>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head></head>
+    <body>
+        <p id="p1">hello</p>
+        <p id="p2">vrdhakla</p>
+        <p id="demo"></p>
+        <p id="result">result</p>
+        <script>
+            document.getElementById("p1").addEventListener("click",function()
+            {
+                document.getElementById("p1").innerHTML="hello world";
+            })
+
+            document.getElementById("p2").addEventListener("click",myfun)
+
+
+
+            function myfun()
+            {
+                document.getElementById("p2").innerHTML="bbbbbbb"
+            }
+
+
+            window.addEventListener("resize", fun1);
+
+            function fun1()
+            {
+                document.getElementById("demo").innerHTML=Math.random();
+            }
+  
+            document.getElementById("p2").removeEventListener("click",myfun);
+
+         
+
+            var p1=10;
+            var p2=20;
+
+            document.getElementById("result").addEventListener("click",function(){addfun(p1,p2);});
+
+            function addfun(a,b)
+            {
+                document.getElementById("result").innerHTML=a+b;
+            }
+           
+            
+
+
+           
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
