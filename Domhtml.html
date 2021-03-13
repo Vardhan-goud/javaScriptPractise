@@ -1,0 +1,42 @@
+<html>
+    <head></head>
+    <body>
+        <p>hiii how are you</p>
+        <button onclick="fun1()">Click</button>
+
+
+        <!-- innerhtml -->
+
+        <p id="p1">hello</p>
+
+
+        <!-- attribute -->
+
+        <img src="https://image.shutterstock.com/image-photo/lord-shiva-parmarth-niketan-haridwar-260nw-1362470804.jpg"  onclick="fun2()" alt="" id="im1">
+
+
+
+        <script>
+            function fun1()
+            {
+                document.write("hello world");
+            }
+            document.getElementById("p1").innerHTML="never give up";
+            var c=0;
+            function fun2()
+            {
+                if(c==0)
+                {
+                    document.getElementById("im1").src="https://images-na.ssl-images-amazon.com/images/I/81UUXGtYyEL.png";
+                    c=1;
+                }
+                else
+                {
+                    document.getElementById("im1").src="https://image.shutterstock.com/image-photo/lord-shiva-parmarth-niketan-haridwar-260nw-1362470804.jpg";
+                    c=0;
+                }
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Dompractise</title>
+    </head>
+    <body>
+        <p onclick="changeName()" id="name">vardhan</p>
+        <p id="college" onclick="changeCollege()">VNRVJIET</p>
+        <p>bachupally</p>
+
+        <p class="fc">Hii i am p1</p>
+        <p class='fc'>Hii i am p2</p>
+
+        <p class="c1" id="p1">hello</p>
+        <p class='c1' id='p1'>hi<p>
+
+
+       <form  id="frm1"  action="">
+            your firstname: <input type="text" id="fname" name="firstname"  value="vardhan">
+          Enter your lastname <input type="text" id="lname" name="lastname" value="lastname">
+           <input type="submit" value="submit" >
+       </form>
+        <button onclick="getd()">try</button>
+
+
+
+        <script>
+        function changeName()
+        {
+           let n = document.getElementById("name");
+           if(n.innerHTML=="karthik")
+           {
+                n.innerHTML="vardhan";
+           }
+           else
+           {
+               n.innerHTML="karthik"
+           }
+        };
+
+        //getElementById
+
+        function changeCollege()
+        {
+           let n = document.getElementById("college");
+           if(n.innerHTML=="VNRVJIET")
+           {
+                n.innerHTML="CBIT";
+               
+           }
+           else
+           {
+               n.innerHTML="VNRVJIET"
+               n.style.color="red";
+                n.style.backgroundColor="yellow";
+                n.style.border="2px solid black";
+                n.style.textAlign="center";
+                n.style.fontSize="20px";
+           }
+        };
+
+
+
+        //getelementbytagname
+
+        let k=document.getElementsByTagName("p")   //list
+        k[2].innerHTML="kukatpally";
+
+
+
+
+        //getElemntByClassname
+
+        let dc=document.getElementsByClassName("fc");  //list
+        dc[1].innerHTML="i am modifued using class"
+
+
+
+        //query selector
+
+        let qs1=document.querySelector("p")
+        console.log(qs1.innerHTML)
+        console.log(qs1)
+        let qs2=document.querySelector(".c1")
+        console.log(qs2)
+        let qs3=document.querySelector("#p1")
+        console.log(qs3)
+
+
+
+
+        //qyerrSelectorAll
+
+        let qsa1=document.querySelectorAll("p");
+        console.log(qsa1);
+        let qsa2=document.querySelectorAll(".c1");
+        console.log(qsa2);
+        let qsa3=document.querySelectorAll("#p1");
+        console.log(qsa3);
+        console.log(qsa3[1].innerHTML)
+      
+
+        //forms
+       function getd()
+       {
+        let fm=document.forms["frm1"];
+        console.log(fm)
+        console.log(fm.elements[0].value)
+       }
+        
+        
+
+            
+        </script>
+    </body>
+</html>
